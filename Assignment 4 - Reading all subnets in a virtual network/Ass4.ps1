@@ -3,7 +3,8 @@ $ResourceGroupName="powershell-grp"
 
 
 # Load the virtual network into memory
-$VirtualNetwork=Get-AzVirtualNetwork -ResourceGroupName $ResourceGroupName -Name $VirtualNetworkName
+$VirtualNetwork=Get-AzVirtualNetwork -ResourceGroupName $ResourceGroupName `
+-Name $VirtualNetworkName
 
 # load the subnet configurations of the virtual network into memory
 $SubnetConfig = $VirtualNetwork | Get-AzVirtualNetworkSubnetConfig
